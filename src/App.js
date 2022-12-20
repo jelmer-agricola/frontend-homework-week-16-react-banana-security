@@ -12,20 +12,12 @@ function App() {
     <>
       <NavBar />
       <div className="content">
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/profile">
-            <Profile />
-          </Route>
-          <Route exact path="/signin">
-            <SignIn />
-          </Route>
-          <Route exact path="/signup">
-            <SignUp />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/profile" element={<Profile/>}/>
+          <Route exact path="/signin" element={<SignIn/>}/>
+          <Route exact path="/signup" element={<SignUp/>}/>
+        </Routes>
       </div>
     </>
   );
